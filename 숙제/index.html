@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="topnav">
+        <div id="text_box">text</div>
+        <div id="comment_count">0</div>
+      </div>
+      <div id="comment_box">
+        <textarea style="resize: none" id="comment_area"></textarea>
+        <button type="button" onclick="addComment()">등록</button>
+      </div>
+      <div id="user_comment" style="display: none">
+        <div class="user_id">id</div>
+        <div class="comment_area">
+          <span class="comment_text">hello</span>
+          <input type="text" class="edit_input" style="display: none" />
+          <button class="save_button" style="display: none">✔️</button>
+          <div>
+            <button class="modify">✏️</button>
+            <button class="delete">🗑️</button>
+          </div>
+        </div>
+        <div class="date">2023-10-13</div>
+      </div>
+    </div>
+    <script src="/gpt.js"></script>
+  </body>
+</html>
