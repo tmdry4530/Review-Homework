@@ -14,12 +14,13 @@
       </div>
       <div id="comment_box">
         <textarea style="resize: none" id="comment_area"></textarea>
-        <button type="button">등록</button>
+        <button type="button" onclick="addComment()">등록</button>
       </div>
       <div id="user_comment" style="display: none">
         <div class="user_id">id</div>
         <div class="comment_area">
           <span class="comment_text">hello</span>
+          <input type="text" class="modify_input" style="display: none" />
           <button class="save_button" style="display: none">✔️</button>
           <div>
             <button class="modify">✏️</button>
@@ -29,6 +30,6 @@
         <div class="date">2023-10-13</div>
       </div>
     </div>
-    <script src="/숙제/comment.js"></script>
+    <script src="/숙제/index.js"></script>
   </body>
 </html>
