@@ -1,7 +1,7 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const router = require("./src/route");
-const cors = require("cors");
 const { sequelize } = require("./src/entity");
 
 app.use(cors());

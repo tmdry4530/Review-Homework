@@ -58,7 +58,7 @@ exports.delete = async (req, res, next) => {
     const userEntity = {
       id: deleteUserDTO.userid,
     };
-    const response = await userService.deleteLUser(userEntity);
+    const response = await userService.deleteUser(userEntity);
     res.json(response);
   } catch (e) {
     next(e);

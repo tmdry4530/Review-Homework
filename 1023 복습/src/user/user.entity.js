@@ -6,6 +6,6 @@ module.exports = (sequelize, DataTypes) => {
       pw: { type: DataTypes.STRING, allowNull: false },
       name: { type: DataTypes.STRING, allowNull: false },
     },
-    { freezeTableNmae: true }
+    { freezeTableName: true }
   );
 };
