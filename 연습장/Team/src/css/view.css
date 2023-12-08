@@ -1,0 +1,19 @@
+.view-content-container {
+  width: 40%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: white;
+}
+
+.view-button-container {
+  display: flex;
+  gap: 20px;
+  margin-left: 30%;
+  margin-top: 30px;
+}
+.view-button-container button {
+  width: 60px;
+  height: 30px;
+}

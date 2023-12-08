@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #textContainer {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #textContainer p {
+        position: absolute;
+        /* 초기 위치와 스타일을 설정합니다 */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="textContainer">
+      <p>텍스트 예시 1</p>
+      <p>텍스트 예시 2</p>
+      <p>텍스트 예시 3</p>
+      <p>텍스트 예시 3</p>
+      <p>텍스트 예시 3</p>
+      <p>텍스트 예시 3</p>
+      <p>텍스트 예시 3</p>
+      <p>텍스트 예시 3</p>
+      <p>텍스트 예시 3</p>
+      <p>텍스트 예시 3</p>
+      <p>텍스트 예시 3</p>
+      <p>텍스트 예시 3</p>
+      <p>텍스트 예시 3</p>
+    </div>
+  </body>
+  <script>
+    const textContainer = document.getElementById("textContainer");
+    const texts = textContainer.getElementsByTagName("p");
+
+    let angle = 0;
+    const radius = 100; // 회오리의 반지름
+
+    function updateTextPosition() {
+      for (let i = 0; i < texts.length; i++) {
+        const text = texts[i];
+        const textAngle = angle + (i * 360) / texts.length;
+        text.style.left = `${Math.cos((textAngle * Math.PI) / 180) * radius}px`;
+        text.style.top = `${Math.sin((textAngle * Math.PI) / 180) * radius}px`;
+      }
+
+      angle += 1; // 회전 속도 조절
+      requestAnimationFrame(updateTextPosition);
+    }
+
+    updateTextPosition();
+  </script>
+</html>
